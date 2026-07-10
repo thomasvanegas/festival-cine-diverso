@@ -43,7 +43,7 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-bold text-festivalRed mb-6 font-futura tracking-widest uppercase">Enlaces Rápidos</h4>
             <ul className="space-y-3 font-sans">
-              <li><NavLink to="/about" className="text-zinc-400 hover:text-white transition-colors text-sm">Quiénes Somos</NavLink></li>
+              <li><NavLink to="/about" className="text-zinc-400 hover:text-white transition-colors text-sm">Una Carta para Quienes Llegan Aquí</NavLink></li>
               <li><NavLink to="/" className="text-zinc-400 hover:text-white transition-colors text-sm">Edición 2026</NavLink></li>
               <li><NavLink to="/2025" className="text-zinc-400 hover:text-white transition-colors text-sm">Edición 2025</NavLink></li>
               <li><NavLink to="/2024" className="text-zinc-400 hover:text-white transition-colors text-sm">Edición 2024</NavLink></li>
@@ -57,7 +57,7 @@ const Footer = () => {
             <h4 className="text-sm font-bold text-festivalRed mb-6 font-futura tracking-widest uppercase">Participación</h4>
             <ul className="space-y-3 font-sans">
               <li>
-                <a href="https://festhome.com/festival/festival-internacional-de-cine-diverso" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors text-sm">
+                <a href="https://festhome.com/festival/festival-de-cine-diverso" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors text-sm">
                   Inscríbete en Festhome
                 </a>
               </li>
@@ -74,15 +74,15 @@ const Footer = () => {
             <div className="space-y-4 font-sans">
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-festivalRed mt-0.5 flex-shrink-0" />
-                <p className="text-zinc-400 text-sm leading-relaxed">festivaldecinediverso@gmail.com</p>
+                <a href="mailto:[EMAIL_ADDRESS]" className="text-zinc-400 hover:text-white transition-colors text-sm">festivaldecinediverso@gmail.com</a>
               </div>
               <div className="flex items-start gap-3">
                 <Instagram className="w-4 h-4 text-festivalRed mt-0.5 flex-shrink-0" />
-                <p className="text-zinc-400 text-sm">@festivaldecinediverso</p>
+                <a href="https://instagram.com/festivaldecinediverso" className="text-zinc-400 hover:text-white transition-colors text-sm" target="_blank">@festivaldecinediverso</a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-festivalRed mt-0.5 flex-shrink-0" />
-                <p className="text-zinc-400 text-sm">Barranquilla, Colombia</p>
+                <a href="#  " className="text-zinc-400 hover:text-white transition-colors text-sm">Barranquilla, Colombia</a>
               </div>
             </div>
           </div>

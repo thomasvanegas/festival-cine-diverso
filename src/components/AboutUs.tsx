@@ -14,18 +14,6 @@ const AboutUs = () => {
         {/* Glow decorativo */}
         <div className="absolute top-10 left-10 w-64 h-64 bg-festivalRed/15 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-festivalRed/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <div className="inline-flex items-center justify-center bg-festivalRed/20 border border-festivalRed/50 rounded-full px-5 py-2 mb-6">
-            <span className="text-xs uppercase font-bold tracking-widest text-red-200 font-ample">Festival Internacional de Cine Diverso</span>
-          </div>
-          <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tight font-futura text-festivalRed">
-            QUIÉNES SOMOS
-          </h1>
-          <p className="text-base md:text-xl font-light text-zinc-300 font-sans max-w-2xl mx-auto">
-            Un espacio donde las historias diversas encuentran pantalla, memoria y comunidad.
-          </p>
-        </div>
       </div>
 
       {/* Main Content */}
@@ -105,9 +93,6 @@ const AboutUs = () => {
           <div className="bg-zinc-950/70 border border-zinc-800 rounded-3xl p-8 hover:border-festivalRed/30 transition-all duration-300 shadow-xl flex flex-col justify-between relative overflow-hidden">
             <div className="absolute inset-0 bg-texture-196 opacity-[0.03] pointer-events-none rounded-3xl" />
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-festivalRed/15 flex items-center justify-center mb-6">
-                <Heart className="w-6 h-6 text-festivalRed fill-current" />
-              </div>
               <h3 className="text-xl md:text-2xl font-bold font-futura text-festivalRed mb-4 uppercase">
                 Lo que mueve este festival
               </h3>
@@ -120,9 +105,6 @@ const AboutUs = () => {
           <div className="bg-zinc-950/70 border border-zinc-800 rounded-3xl p-8 hover:border-festivalRed/30 transition-all duration-300 shadow-xl flex flex-col justify-between relative overflow-hidden">
             <div className="absolute inset-0 bg-texture-196 opacity-[0.03] pointer-events-none rounded-3xl" />
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-festivalRed/15 flex items-center justify-center mb-6">
-                <Compass className="w-6 h-6 text-festivalRed" />
-              </div>
               <h3 className="text-xl md:text-2xl font-bold font-futura text-white mb-4 uppercase">
                 El sueño que seguimos construyendo
               </h3>
@@ -142,17 +124,14 @@ const AboutUs = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: <Users className="w-5 h-5 text-festivalRed" />, title: 'Creemos en la diversidad', text: 'En las múltiples formas de existir, amar, sentir y habitar el mundo.' },
-              { icon: <BookOpen className="w-5 h-5 text-festivalRed" />, title: 'Creemos en la memoria', text: 'Porque el cine puede convertirse en un archivo vivo de historias que durante mucho tiempo fueron invisibilizadas.' },
-              { icon: <Award className="w-5 h-5 text-festivalRed" />, title: 'Creemos en la resistencia', text: 'Este festival existe porque hubo personas que decidieron contar sus historias incluso cuando parecía imposible hacerlo.' },
-              { icon: <ShieldCheck className="w-5 h-5 text-festivalRed" />, title: 'Creemos en los espacios seguros', text: 'En lugares donde nadie tenga que esconder quién es para sentirse parte.' },
-              { icon: <Film className="w-5 h-5 text-festivalRed" />, title: 'Creemos en el poder del cine', text: 'Porque una película puede cambiar la manera en que alguien mira a otra persona o incluso la manera en que se mira a sí misme.' },
-              { icon: <Users className="w-5 h-5 text-festivalRed" />, title: 'Creemos en la comunidad', text: 'Nada de esto tendría sentido sin las personas que llegan, participan, crean, sienten y hacen suyo este espacio.' },
+              { title: 'Creemos en la diversidad', text: 'En las múltiples formas de existir, amar, sentir y habitar el mundo.' },
+              { title: 'Creemos en la memoria', text: 'Porque el cine puede convertirse en un archivo vivo de historias que durante mucho tiempo fueron invisibilizadas.' },
+              { title: 'Creemos en la resistencia', text: 'Este festival existe porque hubo personas que decidieron contar sus historias incluso cuando parecía imposible hacerlo.' },
+              { title: 'Creemos en los espacios seguros', text: 'En lugares donde nadie tenga que esconder quién es para sentirse parte.' },
+              { title: 'Creemos en el poder del cine', text: 'Porque una película puede cambiar la manera en que alguien mira a otra persona o incluso la manera en que se mira a sí misme.' },
+              { title: 'Creemos en la comunidad', text: 'Nada de esto tendría sentido sin las personas que llegan, participan, crean, sienten y hacen suyo este espacio.' },
             ].map((item, i) => (
               <div key={i} className="bg-zinc-950/70 border border-zinc-800 rounded-2xl p-6 hover:border-festivalRed/40 hover:bg-zinc-900/50 transition-all duration-300">
-                <div className="w-10 h-10 rounded-xl bg-festivalRed/10 flex items-center justify-center mb-4">
-                  {item.icon}
-                </div>
                 <h4 className="font-bold text-base text-white mb-2 font-futura">{item.title}</h4>
                 <p className="text-zinc-400 text-sm font-light font-sans leading-relaxed">{item.text}</p>
               </div>
@@ -165,7 +144,7 @@ const AboutUs = () => {
           <div className="absolute inset-0 bg-texture-238 opacity-[0.04] pointer-events-none rounded-3xl" />
           <div className="max-w-3xl mx-auto text-center space-y-6 relative z-10">
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide font-futura text-festivalRed uppercase">
-              Por qué hacemos esto
+              ¿Por qué hacemos esto?
             </h2>
             <div className="text-zinc-300 font-light font-sans text-sm md:text-base leading-relaxed space-y-4 text-left md:text-center">
               <p>

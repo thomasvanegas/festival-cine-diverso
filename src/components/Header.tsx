@@ -154,7 +154,7 @@ const Header = () => {
                 : 'text-white/90 hover:text-festivalRed'
                 }`}
             >
-              Quiénes Somos
+              Una Carta para Quienes Llegan Aquí
             </NavLink>
             <NavLink
               to="/patrocinadores"

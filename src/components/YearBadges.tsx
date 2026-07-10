@@ -28,11 +28,6 @@ const YearBadges = () => {
             className="relative group cursor-pointer"
           >
             <div className="bg-zinc-950/80 border border-zinc-800 rounded-2xl p-8 text-center transform group-hover:scale-[1.03] group-hover:border-festivalRed/60 transition-all duration-300 shadow-xl hover:shadow-festivalRed/10 hover:shadow-2xl">
-              <div className="mb-4">
-                <span className="text-xs font-bold bg-festivalRed/15 text-festivalRed border border-festivalRed/30 px-4 py-1.5 rounded-full font-ample tracking-wider uppercase">
-                  Dossier
-                </span>
-              </div>
               <h3 className="text-5xl md:text-6xl font-black text-white font-futura mb-3">2025</h3>
               <p className="text-zinc-400 text-sm font-light font-sans">Conoce nuestro Dossier de prensa</p>
               <div className="mt-4 text-xs text-festivalRed font-bold uppercase tracking-wider font-ample group-hover:underline">
@@ -44,11 +39,6 @@ const YearBadges = () => {
           {/* 2024 */}
           <NavLink to="/2024" className="relative group cursor-pointer">
             <div className="bg-zinc-950/80 border border-zinc-800 rounded-2xl p-8 text-center transform group-hover:scale-[1.03] group-hover:border-festivalRed/60 transition-all duration-300 shadow-xl hover:shadow-festivalRed/10 hover:shadow-2xl">
-              <div className="mb-4">
-                <span className="text-xs font-bold bg-white/5 text-zinc-300 border border-zinc-700 px-4 py-1.5 rounded-full font-ample tracking-wider uppercase">
-                  Edición Anterior
-                </span>
-              </div>
               <h3 className="text-5xl md:text-6xl font-black text-white font-futura mb-3">2024</h3>
               <p className="text-zinc-400 text-sm font-light font-sans italic">"Todxs brillamos en la pantalla grande"</p>
               <div className="mt-4 text-xs text-festivalRed font-bold uppercase tracking-wider font-ample group-hover:underline">
@@ -60,11 +50,6 @@ const YearBadges = () => {
           {/* 2023 */}
           <NavLink to="/2023" className="relative group cursor-pointer">
             <div className="bg-zinc-950/80 border border-zinc-800 rounded-2xl p-8 text-center transform group-hover:scale-[1.03] group-hover:border-festivalRed/60 transition-all duration-300 shadow-xl hover:shadow-festivalRed/10 hover:shadow-2xl">
-              <div className="mb-4">
-                <span className="text-xs font-bold bg-white/5 text-zinc-300 border border-zinc-700 px-4 py-1.5 rounded-full font-ample tracking-wider uppercase">
-                  Primera Edición
-                </span>
-              </div>
               <h3 className="text-5xl md:text-6xl font-black text-white font-futura mb-3">2023</h3>
               <p className="text-zinc-400 text-sm font-light font-sans italic">"Donde Todxs brillamos en la pantalla grande"</p>
               <div className="mt-4 text-xs text-festivalRed font-bold uppercase tracking-wider font-ample group-hover:underline">
