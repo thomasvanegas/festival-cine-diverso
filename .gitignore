@@ -23,3 +23,15 @@ dist-ssr
 *.sln
 *.sw?
 .env
+*.psd
+*.pdf
+
+# Documentos
+docs/
+
+# Token
+github_token.txt
+
+# Archivos pesados
+public/2026/FICIDI_IV_PIEZAS_GRAFICAS/POSTER_FICIDI_IV.psd
+public/2026/FICIDI_IV_PIEZAS_GRAFICAS/POSTER_FICIDI_IV_QR.psdgithub-token.txt

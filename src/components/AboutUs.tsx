@@ -1,141 +1,222 @@
 import React from 'react';
-import { Heart, Users, Film, Award, Globe, TreePine } from 'lucide-react';
-import BackgroundDecoration from './ui/BackgroundDecoration';
+import { Heart, Users, Film, Award, BookOpen, ShieldCheck, Compass } from 'lucide-react';
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 animate-fade-in">
-      {/* Hero Section estilo 2023/2024 */}
-      <div className="relative bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-50 py-24 overflow-hidden rounded-b-3xl">
-        <BackgroundDecoration variant="default" bgImage="/Footer.png" opacity={0.8} />
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-6xl font-black mb-4 drop-shadow-[0_2px_16px_rgba(168,85,247,0.5)] text-purple-900">
-              QUIÉNES SOMOS
-            </h1>
-            <p className="text-xl md:text-2xl font-medium text-purple-700 drop-shadow-[0_2px_8px_rgba(236,72,153,0.4)]">
-              Festival Internacional de Cine Diverso
-            </p>
+    <div className="min-h-screen bg-black text-white font-sans overflow-hidden">
+
+      {/* Hero Section con textura grunge */}
+      <div className="relative py-28 md:py-36 overflow-hidden">
+        {/* Textura de fondo grunge */}
+        <div className="absolute inset-0 bg-texture-196 opacity-[0.12] pointer-events-none" />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black pointer-events-none" />
+        {/* Glow decorativo */}
+        <div className="absolute top-10 left-10 w-64 h-64 bg-festivalRed/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-festivalRed/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <div className="inline-flex items-center justify-center bg-festivalRed/20 border border-festivalRed/50 rounded-full px-5 py-2 mb-6">
+            <span className="text-xs uppercase font-bold tracking-widest text-red-200 font-ample">Festival Internacional de Cine Diverso</span>
           </div>
+          <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tight font-futura text-festivalRed">
+            QUIÉNES SOMOS
+          </h1>
+          <p className="text-base md:text-xl font-light text-zinc-300 font-sans max-w-2xl mx-auto">
+            Un espacio donde las historias diversas encuentran pantalla, memoria y comunidad.
+          </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        
-        {/* Mission Statement */}
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-white text-center mb-16 animate-fade-in-up">
-          <div className="flex justify-center space-x-4 mb-8">
-            <TreePine className="w-16 h-16 text-yellow-300" />
-            <Heart className="w-16 h-16 text-pink-300" />
-            <TreePine className="w-16 h-16 text-purple-300" />
+      <div className="max-w-6xl mx-auto px-6 pb-20 space-y-16 relative z-10">
+
+        {/* Carta de Jorge Andrés Escorcia Cantillo */}
+        <section className="bg-zinc-950/80 border border-zinc-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-texture-238 opacity-[0.04] pointer-events-none rounded-3xl" />
+          {/* Watermark logo */}
+          <div className="absolute -bottom-10 -right-10 opacity-[0.03] pointer-events-none w-72">
+            <img src="/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png" alt="" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-black mb-8">Nuestra Misión</h2>
-          <p className="text-xl leading-relaxed max-w-4xl mx-auto">
-            El Festival Internacional de Cine Diverso es un espacio de encuentro, celebración y 
-            resistencia que nace en Barranquilla, Colombia, con el propósito de visibilizar y 
-            celebrar las narrativas LGBTIQ+ a través del arte cinematográfico. Nos mueve el arte, 
-            la diversidad y las historias que nos habitan, creando un puente entre diferentes 
-            culturas y realidades sociales.
-          </p>
+
+          <h2 className="text-xl md:text-2xl font-extrabold mb-8 tracking-wide font-futura text-festivalRed border-b border-zinc-800 pb-4 uppercase">
+            Una carta para quienes llegan aquí
+          </h2>
+
+          <div className="prose prose-invert max-w-none text-zinc-300 font-sans space-y-5 leading-relaxed text-sm md:text-base font-light">
+            <p className="font-semibold text-white text-base">Hola.</p>
+            <p>Mi nombre es <span className="font-semibold text-white">Jorge Andrés Escorcia Cantillo</span>.</p>
+            <p>Antes que cualquier otra cosa, quiero darte las gracias por llegar hasta este espacio.</p>
+            <p>
+              Muchas veces pienso que este festival nació mucho antes de existir oficialmente. Nació en las preguntas que me hacía, en las historias que sentía cercanas, en la necesidad de encontrarme y encontrarnos en una pantalla.
+            </p>
+            <p>
+              Todo comenzó mientras realizaba junto a unes amigues un documental universitario sobre la vida de una drag queen en Barranquilla. Recuerdo que durante ese proceso algo hizo clic dentro de mí: entendí que nuestras historias estaban llenas de belleza, sensibilidad, dolor, resistencia y humanidad, pero que muchas veces no tenían espacios reales donde ser vistas, escuchadas o celebradas.
+            </p>
+            <p>
+              Tiempo después, mientras trabajaba como actor en una producción audiovisual, esa sensación volvió a aparecer. Me di cuenta de que sí existía cine LGBTIQ+ en Colombia, sí había personas creando desde la diversidad, pero seguían siendo pocos los escenarios donde esas narrativas pudieran habitar con libertad.
+            </p>
+
+            <div className="my-8 pl-6 border-l-4 border-festivalRed italic space-y-2 text-red-200 font-ample text-base py-1">
+              <p>Y entonces apareció esta idea.</p>
+              <p>No como una gran empresa.</p>
+              <p>No como algo perfectamente planeado.</p>
+              <p>Sino como una necesidad profundamente humana.</p>
+              <p>La necesidad de crear un espacio seguro para nuestras historias.</p>
+            </div>
+
+            <p>
+              Así nació el Festival Internacional de Cine Diverso en 2023. Y aunque empezó desde una inquietud muy personal, hoy se ha convertido en un escenario colectivo donde muchísimas personas diversas encuentran un lugar para narrarse, reconocerse y existir.
+            </p>
+            <p className="font-medium text-white">
+              Porque este festival también nace desde la necesidad de generar empatía.
+            </p>
+            <p>
+              Y aunque muchas veces mi nombre aparece al frente del proyecto, la verdad es que este espacio jamás habría sido posible sin las personas que creyeron en él desde el inicio.
+            </p>
+
+            <div className="bg-black/60 rounded-2xl p-6 border border-festivalRed/20 my-6">
+              <p className="font-semibold text-white mb-2">Creo profundamente que los proyectos culturales no se construyen solos.</p>
+              <p className="text-festivalRed font-medium">Se construyen desde los afectos.</p>
+              <p className="text-festivalRed font-medium">Desde la confianza.</p>
+              <p className="text-festivalRed font-medium">Desde las personas que te dicen "sí" cuando todo todavía parecía incierto.</p>
+            </div>
+
+            <p>
+              Desde entonces hemos realizado tres ediciones, exhibido más de 120 cortometrajes de más de 20 países, y conectado con más de 5.000 espectadores. Hemos llevado nuestros espacios formativos a ciudades como Bogotá, Medellín y Cali.
+            </p>
+            <p>
+              Con el tiempo también entendimos que era importante formar públicos, acompañar nueves creadores y abrir espacios pedagógicos. Por eso nacieron iniciativas como <span className="text-festivalRed font-medium">Historias que nos habitan</span>, <span className="text-festivalRed font-medium">Filma Diverso</span> y <span className="text-festivalRed font-medium">Queer Fest</span>.
+            </p>
+            <p>
+              Pero creo que lo más valioso no son los números. Lo más valioso ha sido ver cómo las personas se emocionan al sentirse representadas.
+            </p>
+            <p className="font-semibold text-festivalRed">
+              Porque para mí el cine también hace archivo. Y contar nuestras historias es otra forma de permanecer.
+            </p>
+            <p className="pt-4 text-zinc-200">Gracias por estar aquí.</p>
+            <p className="text-zinc-200">Gracias por creer en las historias diversas.</p>
+            <p className="text-zinc-200">Gracias por ayudar a construir este espacio con nosotres.</p>
+          </div>
+        </section>
+
+        {/* Lo que mueve el festival y El sueño */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-zinc-950/70 border border-zinc-800 rounded-3xl p-8 hover:border-festivalRed/30 transition-all duration-300 shadow-xl flex flex-col justify-between relative overflow-hidden">
+            <div className="absolute inset-0 bg-texture-196 opacity-[0.03] pointer-events-none rounded-3xl" />
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-festivalRed/15 flex items-center justify-center mb-6">
+                <Heart className="w-6 h-6 text-festivalRed fill-current" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold font-futura text-festivalRed mb-4 uppercase">
+                Lo que mueve este festival
+              </h3>
+              <p className="text-zinc-300 leading-relaxed font-light font-sans text-sm md:text-base">
+                Creamos este espacio para visibilizar las narrativas LGBTIQ+ a través del cine y las artes audiovisuales, entendiendo las historias como herramientas capaces de transformar miradas, abrir conversaciones y construir memoria colectiva.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-zinc-950/70 border border-zinc-800 rounded-3xl p-8 hover:border-festivalRed/30 transition-all duration-300 shadow-xl flex flex-col justify-between relative overflow-hidden">
+            <div className="absolute inset-0 bg-texture-196 opacity-[0.03] pointer-events-none rounded-3xl" />
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-festivalRed/15 flex items-center justify-center mb-6">
+                <Compass className="w-6 h-6 text-festivalRed" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold font-futura text-white mb-4 uppercase">
+                El sueño que seguimos construyendo
+              </h3>
+              <div className="text-zinc-300 leading-relaxed font-light font-sans space-y-3 text-sm md:text-base">
+                <p>Soñamos con que este festival siga creciendo hasta convertirse en un referente para el cine diverso en Colombia y América Latina.</p>
+                <p>Soñamos con seguir llevando nuestras historias a más territorios, conectar nuevas voces y demostrar que las narrativas LGBTIQ+ son historias humanas que merecen ocupar todos los espacios.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Our Story */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16 animate-fade-in-up delay-200">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Nuestra Historia</h3>
-            <div className="space-y-4 text-gray-600">
+        {/* Las cosas en las que creemos */}
+        <section className="space-y-8">
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide font-futura text-center text-white uppercase">
+            Las cosas en las que <span className="text-festivalRed">creemos</span>
+          </h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: <Users className="w-5 h-5 text-festivalRed" />, title: 'Creemos en la diversidad', text: 'En las múltiples formas de existir, amar, sentir y habitar el mundo.' },
+              { icon: <BookOpen className="w-5 h-5 text-festivalRed" />, title: 'Creemos en la memoria', text: 'Porque el cine puede convertirse en un archivo vivo de historias que durante mucho tiempo fueron invisibilizadas.' },
+              { icon: <Award className="w-5 h-5 text-festivalRed" />, title: 'Creemos en la resistencia', text: 'Este festival existe porque hubo personas que decidieron contar sus historias incluso cuando parecía imposible hacerlo.' },
+              { icon: <ShieldCheck className="w-5 h-5 text-festivalRed" />, title: 'Creemos en los espacios seguros', text: 'En lugares donde nadie tenga que esconder quién es para sentirse parte.' },
+              { icon: <Film className="w-5 h-5 text-festivalRed" />, title: 'Creemos en el poder del cine', text: 'Porque una película puede cambiar la manera en que alguien mira a otra persona o incluso la manera en que se mira a sí misme.' },
+              { icon: <Users className="w-5 h-5 text-festivalRed" />, title: 'Creemos en la comunidad', text: 'Nada de esto tendría sentido sin las personas que llegan, participan, crean, sienten y hacen suyo este espacio.' },
+            ].map((item, i) => (
+              <div key={i} className="bg-zinc-950/70 border border-zinc-800 rounded-2xl p-6 hover:border-festivalRed/40 hover:bg-zinc-900/50 transition-all duration-300">
+                <div className="w-10 h-10 rounded-xl bg-festivalRed/10 flex items-center justify-center mb-4">
+                  {item.icon}
+                </div>
+                <h4 className="font-bold text-base text-white mb-2 font-futura">{item.title}</h4>
+                <p className="text-zinc-400 text-sm font-light font-sans leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Por qué hacemos esto */}
+        <section className="bg-zinc-950/70 border border-festivalRed/20 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute inset-0 bg-texture-238 opacity-[0.04] pointer-events-none rounded-3xl" />
+          <div className="max-w-3xl mx-auto text-center space-y-6 relative z-10">
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide font-futura text-festivalRed uppercase">
+              Por qué hacemos esto
+            </h2>
+            <div className="text-zinc-300 font-light font-sans text-sm md:text-base leading-relaxed space-y-4 text-left md:text-center">
               <p>
-                Fundado en 2023, el Festival Internacional de Cine Diverso surge como respuesta 
-                a la necesidad de crear espacios seguros y celebratorios para las narrativas 
-                LGBTIQ+ en el Caribe colombiano.
+                Hacemos esto porque crecimos viendo muy pocas historias que se parecieran a nosotres. Porque muchas veces nuestras existencias fueron contadas desde el estereotipo, el silencio o la ausencia.
               </p>
               <p>
-                Desde nuestra primera edición, hemos crecido hasta convertirnos en un referente 
-                regional para el cine diverso, atrayendo participantes de más de 15 países y 
-                consolidándonos como una plataforma vital para voces históricamente marginadas.
+                Sabemos lo importante que puede ser verse reflejade en una pantalla y sentir, aunque sea por un instante, que nuestra historia también merece ocupar un lugar en el mundo.
               </p>
               <p>
-                Cada año, el festival evoluciona manteniendo su esencia: ser un jardín de voces 
-                donde cada película es un brote nuevo que desafía las normas y embellece nuestro 
-                paisaje social y cultural.
+                Hacemos este festival porque creemos profundamente en el poder de narrarnos. Porque queremos que las personas que hacen cine diverso sepan que aquí tienen un espacio donde sus historias importan, tienen rostro y tienen memoria.
               </p>
             </div>
           </div>
+        </section>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Nuestros Valores</h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <Heart className="w-8 h-8 text-pink-500 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-lg text-gray-800">Inclusión</h4>
-                  <p className="text-gray-600">Creamos espacios seguros para todas las identidades</p>
-                </div>
+        {/* Lo que hemos construido */}
+        <section className="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute inset-0 bg-texture-196 opacity-[0.04] pointer-events-none rounded-3xl" />
+          <h2 className="text-2xl md:text-3xl font-extrabold text-center tracking-wide font-futura text-white mb-12 uppercase relative z-10">
+            Lo que hemos <span className="text-festivalRed">construido</span> juntes
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12 relative z-10">
+            {[
+              { num: '3', label: 'Ediciones realizadas' },
+              { num: '+120', label: 'Cortos exhibidos' },
+              { num: '+20', label: 'Países participantes' },
+              { num: '+5.000', label: 'Espectadores' },
+            ].map((s, i) => (
+              <div key={i} className="bg-black/50 rounded-2xl p-6 border border-zinc-900">
+                <span className="block text-4xl md:text-5xl font-black text-festivalRed font-futura mb-2">{s.num}</span>
+                <span className="text-xs font-light text-zinc-400 font-sans uppercase tracking-wide">{s.label}</span>
               </div>
-              <div className="flex items-start space-x-4">
-                <Users className="w-8 h-8 text-purple-500 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-lg text-gray-800">Resistencia</h4>
-                  <p className="text-gray-600">El arte como herramienta de transformación social</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <Globe className="w-8 h-8 text-green-500 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-lg text-gray-800">Diversidad</h4>
-                  <p className="text-gray-600">Celebramos la riqueza de las diferencias</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <Film className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-lg text-gray-800">Excelencia</h4>
-                  <p className="text-gray-600">Promovemos la calidad cinematográfica</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
 
-        {/* Impact Numbers */}
-        <div className="bg-gradient-to-r from-green-500 to-teal-600 rounded-3xl p-12 text-white mb-16 animate-fade-in-up delay-300">
-          <h2 className="text-3xl font-bold text-center mb-12">Nuestro Impacto</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-black mb-2">3</div>
-              <p className="text-green-100">Ediciones realizadas</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-black mb-2">120+</div>
-              <p className="text-green-100">Cortometrajes exhibidos</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-black mb-2">20</div>
-              <p className="text-green-100">Países participantes</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-black mb-2">5,000+</div>
-              <p className="text-green-100">Espectadores alcanzados</p>
-            </div>
+          <div className="max-w-2xl mx-auto bg-black/50 rounded-2xl p-6 md:p-8 border border-zinc-900 relative z-10">
+            <h4 className="font-bold text-center text-white font-futura mb-4 uppercase text-sm tracking-wider">Actividades y Proyectos Especiales</h4>
+            <ul className="space-y-3 text-zinc-300 text-sm font-light font-sans">
+              <li className="flex items-start gap-2">
+                <span className="text-festivalRed font-bold flex-shrink-0">•</span>
+                <span>Talleres y muestras audiovisuales realizadas en <span className="font-semibold text-white">Barranquilla, Bogotá, Cali y Medellín</span>.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-festivalRed font-bold flex-shrink-0">•</span>
+                <span>Creación y desarrollo de espacios formativos como: <span className="text-festivalRed font-medium">Historias que nos habitan</span>, <span className="text-festivalRed font-medium">Filma Diverso</span> y <span className="text-festivalRed font-medium">Queer Fest</span>.</span>
+              </li>
+            </ul>
           </div>
-        </div>
+        </section>
 
-        {/* Vision */}
-        <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-3xl p-12 text-white text-center animate-fade-in-up delay-500">
-          <Award className="w-16 h-16 mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-black mb-8">Nuestra Visión</h2>
-          <p className="text-xl leading-relaxed max-w-4xl mx-auto mb-8">
-            Ser el festival de cine LGBTIQ+ más importante del Caribe colombiano, 
-            reconocido internacionalmente por su compromiso con la diversidad, 
-            la calidad cinematográfica y su impacto en la transformación social.
-          </p>
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-            Aspiramos a ser un catalizador de cambio que inspire políticas públicas 
-            inclusivas y contribuya a la construcción de una sociedad más justa y equitativa 
-            para todas las personas, especialmente para la población LGBTIQ+.
-          </p>
-        </div>
       </div>
     </div>
   );

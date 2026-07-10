@@ -1,4 +1,69 @@
 @tailwind base;
+
+@font-face {
+  font-family: 'AmpleSoft';
+  src: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Tipografías/AmpleSoft-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Tipografías/FuturaCyrillicLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Tipografías/FuturaCyrillicBook.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Tipografías/FuturaCyrillicMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Tipografías/FuturaCyrillicDemi.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Tipografías/FuturaCyrillicBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Tipografías/FuturaCyrillicExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Tipografías/FuturaCyrillicHeavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -7,6 +72,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -17,6 +83,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -66,13 +133,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #ec4899, #8b5cf6);
+  background: linear-gradient(to bottom, #FA0201, #FFF);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #db2777, #7c3aed);
+  background: linear-gradient(to bottom, #FA0201, #000);
 }
+
 /* Utilidad para truncar texto en múltiples líneas con elipsis */
 .line-clamp-4 {
   display: -webkit-box;
@@ -95,4 +163,26 @@ html {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
+}
+
+/* Grunge Texture Utilities for 2026 Edition */
+.bg-texture-188 {
+  background-image: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Texturas/Texturelabs_Grunge_188M.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-texture-196 {
+  background-image: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Texturas/Texturelabs_Grunge_196M.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-texture-238 {
+  background-image: url('/2026/FICIDI_IV_PIEZAS_GRAFICAS/Texturas/Texturelabs_Grunge_238M.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
