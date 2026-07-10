@@ -4,12 +4,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Festival2025 from './components/Festival2025';
 import Festival2024 from './components/Festival2024';
 import Festival2023 from './components/Festival2023';
 import AboutUs from './components/AboutUs';
 import Filmmakers from './components/Filmmakers';
 import BasesParticipacion from './components/BasesParticipacion';
 import Home from './components/Home';
+import SponsorsSection from './components/SponsorsSection';
 
 /**
  * Punto de entrada de la aplicación.
@@ -36,12 +38,13 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/2025" element={<Home />} />
+            <Route path="/2025" element={<Festival2025 />} />
             <Route path="/2023" element={<Festival2023 />} />
             <Route path="/2024" element={<Festival2024 />} />
             <Route path="/filmmakers" element={<Filmmakers />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/bases-participacion" element={<BasesParticipacion />} />
+            <Route path="/patrocinadores" element={<SponsorsSection />} />
           </Routes>
         </main>
         <Footer />
