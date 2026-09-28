@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, ChevronDown, ChevronUp } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import { useEditionTheme } from '../theme/editionTheme';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,6 +10,7 @@ const Header = () => {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const theme = useEditionTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,14 +65,15 @@ const Header = () => {
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'bg-black/95 border-b border-festivalRed/30 backdrop-blur-md shadow-lg'
-        : 'bg-transparent'
+        ? theme.headerScrolledBg
+        : theme.headerIdleBg
         }`}>
+        {theme.headerStripe && <div className={theme.headerStripe} />}
         <nav className="flex justify-between items-center p-6 md:p-8 max-w-7xl mx-auto">
           <NavLink to="/" className="flex items-center space-x-2 group">
             <img src="/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png" alt="Colibrí Logo" className="h-16 w-auto" />
-            <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? 'text-festivalRed' : 'text-white'
-              } group-hover:text-festivalRed`}>
+            <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? theme.logoScrolledText : theme.logoIdleText
+              } ${theme.logoHoverText}`}>
               FICIDI
             </span>
           </NavLink>
@@ -84,7 +87,7 @@ const Header = () => {
             >
               <button
                 type="button"
-                className={`flex items-center gap-1 transition-all duration-300 hover:scale-105 transform hover:font-bold ${dropdownOpen ? 'text-festivalRed' : 'text-white/90 hover:text-festivalRed'
+                className={`flex items-center gap-1 transition-all duration-300 hover:scale-105 transform hover:font-bold ${dropdownOpen ? theme.navActiveText : `${theme.navText} ${theme.navHoverText}`
                   }`}
               >
                 Ediciones
@@ -93,7 +96,7 @@ const Header = () => {
 
               {dropdownOpen && (
                 <div
-                  className="absolute left-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-xl shadow-xl border border-festivalRed/30 py-2 z-50 animate-fade-in"
+                  className={`absolute left-0 mt-2 w-48 ${theme.dropdownPanelBg} py-2 z-50 animate-fade-in`}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -101,7 +104,7 @@ const Header = () => {
                     to="/"
                     end
                     className={({ isActive }) =>
-                      `block px-4 py-2.5 text-sm transition-colors ${isActive ? 'font-bold text-festivalRed bg-purple-950/40' : 'text-white/80 hover:text-festivalRed'
+                      `block px-4 py-2.5 text-sm transition-colors ${isActive ? theme.dropdownItemActive : `${theme.dropdownItemText} ${theme.dropdownItemHover}`
                       }`
                     }
                   >
@@ -110,7 +113,7 @@ const Header = () => {
                   <NavLink
                     to="/2025"
                     className={({ isActive }) =>
-                      `block px-4 py-2.5 text-sm transition-colors ${isActive ? 'font-bold text-festivalRed bg-purple-950/40' : 'text-white/80 hover:text-festivalRed'
+                      `block px-4 py-2.5 text-sm transition-colors ${isActive ? theme.dropdownItemActive : `${theme.dropdownItemText} ${theme.dropdownItemHover}`
                       }`
                     }
                   >
@@ -119,7 +122,7 @@ const Header = () => {
                   <NavLink
                     to="/2024"
                     className={({ isActive }) =>
-                      `block px-4 py-2.5 text-sm transition-colors ${isActive ? 'font-bold text-festivalRed bg-purple-950/40' : 'text-white/80 hover:text-festivalRed'
+                      `block px-4 py-2.5 text-sm transition-colors ${isActive ? theme.dropdownItemActive : `${theme.dropdownItemText} ${theme.dropdownItemHover}`
                       }`
                     }
                   >
@@ -128,7 +131,7 @@ const Header = () => {
                   <NavLink
                     to="/2023"
                     className={({ isActive }) =>
-                      `block px-4 py-2.5 text-sm transition-colors ${isActive ? 'font-bold text-festivalRed bg-purple-950/40' : 'text-white/80 hover:text-festivalRed'
+                      `block px-4 py-2.5 text-sm transition-colors ${isActive ? theme.dropdownItemActive : `${theme.dropdownItemText} ${theme.dropdownItemHover}`
                       }`
                     }
                   >
@@ -141,8 +144,8 @@ const Header = () => {
             <NavLink
               to="/filmmakers"
               className={({ isActive }) => `transition-all duration-300 hover:scale-105 transform ${isActive
-                ? 'text-festivalRed font-bold'
-                : 'text-white/90 hover:text-festivalRed'
+                ? theme.navActiveText + ' font-bold'
+                : `${theme.navText} ${theme.navHoverText}`
                 }`}
             >
               Hacedores de Cine
@@ -150,8 +153,8 @@ const Header = () => {
             <NavLink
               to="/about"
               className={({ isActive }) => `transition-all duration-300 hover:scale-105 transform ${isActive
-                ? 'text-festivalRed font-bold'
-                : 'text-white/90 hover:text-festivalRed'
+                ? theme.navActiveText + ' font-bold'
+                : `${theme.navText} ${theme.navHoverText}`
                 }`}
             >
               Una Carta para Quienes Llegan Aquí
@@ -159,8 +162,8 @@ const Header = () => {
             <NavLink
               to="/patrocinadores"
               className={({ isActive }) => `transition-all duration-300 hover:scale-105 transform ${isActive
-                ? 'text-festivalRed font-bold'
-                : 'text-white/90 hover:text-festivalRed'
+                ? theme.navActiveText + ' font-bold'
+                : `${theme.navText} ${theme.navHoverText}`
                 }`}
             >
               Patrocinadores
@@ -169,7 +172,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 focus:outline-none text-white hover:text-festivalRed"
+            className={`md:hidden p-2 focus:outline-none ${theme.navText} ${theme.navHoverText}`}
             aria-label="Abrir menú"
             onClick={() => setSidebarOpen(true)}
           >
@@ -187,13 +190,13 @@ const Header = () => {
           onClick={handleOverlayClick}
         >
           <aside
-            className="fixed top-0 right-0 h-full w-72 max-w-full bg-black/95 border-l border-festivalRed/20 shadow-xl p-6 flex flex-col gap-6 transition-transform duration-300 transform translate-x-0"
+            className={`fixed top-0 right-0 h-full w-72 max-w-full ${theme.sidebarBg} border-l ${theme.sidebarBorder} shadow-xl p-6 flex flex-col gap-6 transition-transform duration-300 transform translate-x-0`}
             style={{ transition: 'transform 0.3s' }}
           >
             <div className="flex justify-between items-center mb-4">
-              <span className="font-bold text-lg text-festivalRed">Menú</span>
+              <span className={`font-bold text-lg ${theme.sidebarTitleText}`}>Menú</span>
               <button
-                className="p-2 text-white hover:text-festivalRed"
+                className={`p-2 ${theme.sidebarCloseText} ${theme.sidebarCloseHoverText}`}
                 aria-label="Cerrar menú"
                 onClick={() => setSidebarOpen(false)}
               >
@@ -206,18 +209,18 @@ const Header = () => {
                 <button
                   type="button"
                   onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-                  className="flex items-center justify-between text-white/90 hover:text-festivalRed py-2 transition-colors text-left"
+                  className={`flex items-center justify-between ${theme.mobileTextPrimary} ${theme.mobileHoverText} py-2 transition-colors text-left`}
                 >
                   <span>Ediciones</span>
                   {mobileDropdownOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                 </button>
                 {mobileDropdownOpen && (
-                  <div className="flex flex-col gap-3 pl-4 border-l border-festivalRed/30 mt-1 mb-2">
+                  <div className={`flex flex-col gap-3 pl-4 border-l ${theme.mobileAccordionBorder} mt-1 mb-2`}>
                     <NavLink
                       to="/"
                       end
                       className={({ isActive }) =>
-                        `text-sm py-1 transition-colors ${isActive ? 'text-festivalRed font-bold' : 'text-white/70 hover:text-festivalRed'
+                        `text-sm py-1 transition-colors ${isActive ? theme.mobileActiveText + ' font-bold' : `${theme.mobileTextSecondary} ${theme.mobileHoverText}`
                         }`
                       }
                       onClick={() => setSidebarOpen(false)}
@@ -227,7 +230,7 @@ const Header = () => {
                     <NavLink
                       to="/2025"
                       className={({ isActive }) =>
-                        `text-sm py-1 transition-colors ${isActive ? 'text-festivalRed font-bold' : 'text-white/70 hover:text-festivalRed'
+                        `text-sm py-1 transition-colors ${isActive ? theme.mobileActiveText + ' font-bold' : `${theme.mobileTextSecondary} ${theme.mobileHoverText}`
                         }`
                       }
                       onClick={() => setSidebarOpen(false)}
@@ -237,7 +240,7 @@ const Header = () => {
                     <NavLink
                       to="/2024"
                       className={({ isActive }) =>
-                        `text-sm py-1 transition-colors ${isActive ? 'text-festivalRed font-bold' : 'text-white/70 hover:text-festivalRed'
+                        `text-sm py-1 transition-colors ${isActive ? theme.mobileActiveText + ' font-bold' : `${theme.mobileTextSecondary} ${theme.mobileHoverText}`
                         }`
                       }
                       onClick={() => setSidebarOpen(false)}
@@ -247,7 +250,7 @@ const Header = () => {
                     <NavLink
                       to="/2023"
                       className={({ isActive }) =>
-                        `text-sm py-1 transition-colors ${isActive ? 'text-festivalRed font-bold' : 'text-white/70 hover:text-festivalRed'
+                        `text-sm py-1 transition-colors ${isActive ? theme.mobileActiveText + ' font-bold' : `${theme.mobileTextSecondary} ${theme.mobileHoverText}`
                         }`
                       }
                       onClick={() => setSidebarOpen(false)}
@@ -261,7 +264,7 @@ const Header = () => {
               <NavLink
                 to="/filmmakers"
                 className={({ isActive }) =>
-                  `transition-colors duration-200 py-2 ${isActive ? 'text-festivalRed font-bold' : 'text-white/90 hover:text-festivalRed'
+                  `transition-colors duration-200 py-2 ${isActive ? theme.mobileActiveText + ' font-bold' : `${theme.mobileTextPrimary} ${theme.mobileHoverText}`
                   }`
                 }
                 onClick={() => setSidebarOpen(false)}
@@ -271,7 +274,7 @@ const Header = () => {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `transition-colors duration-200 py-2 ${isActive ? 'text-festivalRed font-bold' : 'text-white/90 hover:text-festivalRed'
+                  `transition-colors duration-200 py-2 ${isActive ? theme.mobileActiveText + ' font-bold' : `${theme.mobileTextPrimary} ${theme.mobileHoverText}`
                   }`
                 }
                 onClick={() => setSidebarOpen(false)}
@@ -281,7 +284,7 @@ const Header = () => {
               <NavLink
                 to="/patrocinadores"
                 className={({ isActive }) =>
-                  `transition-colors duration-200 py-2 ${isActive ? 'text-festivalRed font-bold' : 'text-white/90 hover:text-festivalRed'
+                  `transition-colors duration-200 py-2 ${isActive ? theme.mobileActiveText + ' font-bold' : `${theme.mobileTextPrimary} ${theme.mobileHoverText}`
                   }`
                 }
                 onClick={() => setSidebarOpen(false)}
