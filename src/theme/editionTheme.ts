@@ -147,9 +147,59 @@ const festival2023Theme: EditionTheme = {
   footerLinkHover: 'hover:text-[#954695]',
 };
 
+/**
+ * Tema de la II Edición (2024), basado en la paleta oficial de esa edición:
+ * Azul #0033FF, Amarillo #FFCC00, Rojo #FF3300, Verde #00CC33, Cian #00CCFF,
+ * Naranja #FF6600, Rosa #FF99CC.
+ *
+ * Mismo criterio que en 2023: fondo claro en Header y Footer para que se lea
+ * como identidad propia (no una variación del negro/rojo de 2026). De los 7
+ * colores, solo Azul (#0033FF) y Rojo (#FF3300) tienen contraste suficiente
+ * para usarse como texto sobre blanco; el resto de la paleta (amarillo, verde,
+ * cian, naranja, rosa) se reserva para la franja decorativa multicolor.
+ */
+const festival2024Theme: EditionTheme = {
+  headerIdleBg: 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-[#0033FF]/15',
+  headerScrolledBg: 'bg-white backdrop-blur-md shadow-md border-b border-[#0033FF]/20',
+  headerStripe: 'absolute bottom-0 left-0 right-0 h-1 bg-[linear-gradient(to_right,#0033FF,#00CCFF,#00CC33,#FFCC00,#FF6600,#FF3300,#FF99CC)]',
+  logoIdleText: 'text-[#0033FF]',
+  logoScrolledText: 'text-[#0033FF]',
+  logoHoverText: 'group-hover:text-[#FF3300]',
+  navText: 'text-gray-700',
+  navHoverText: 'hover:text-[#FF3300]',
+  navActiveText: 'text-[#0033FF]',
+  dropdownPanelBg: 'bg-white backdrop-blur-md rounded-xl shadow-xl border border-[#0033FF]/15',
+  dropdownItemText: 'text-gray-700',
+  dropdownItemHover: 'hover:text-[#FF3300]',
+  dropdownItemActive: 'font-bold text-[#0033FF] bg-[#0033FF]/10',
+  sidebarBg: 'bg-white',
+  sidebarBorder: 'border-[#0033FF]/15',
+  sidebarTitleText: 'text-[#0033FF]',
+  sidebarCloseText: 'text-gray-700',
+  sidebarCloseHoverText: 'hover:text-[#0033FF]',
+  mobileAccordionBorder: 'border-[#0033FF]/20',
+  mobileTextPrimary: 'text-gray-700',
+  mobileTextSecondary: 'text-gray-500',
+  mobileHoverText: 'hover:text-[#FF3300]',
+  mobileActiveText: 'text-[#0033FF]',
+
+  footerBg: 'bg-white text-gray-900',
+  footerTopBar: 'absolute top-0 left-0 right-0 h-1 bg-[linear-gradient(to_right,transparent,#0033FF,#00CCFF,#00CC33,#FFCC00,#FF6600,#FF3300,#FF99CC,transparent)]',
+  footerHeadlineText: 'text-gray-900',
+  footerBodyText: 'text-gray-600',
+  footerHeading: 'text-[#0033FF]',
+  footerIcon: 'text-[#0033FF]',
+  footerSocialColors: 'border-gray-300 text-gray-600 hover:border-[#FF3300] hover:text-[#FF3300]',
+  footerLinkClasses: 'text-gray-600 hover:text-[#FF3300] transition-colors text-sm',
+  footerDivider: 'border-gray-200',
+  footerMutedText: 'text-gray-500',
+  footerLinkHover: 'hover:text-[#FF3300]',
+};
+
 /** Mapa de prefijos de ruta a tema. El primero que haga match (startsWith) gana. */
 const editionThemes: Array<{ prefix: string; theme: EditionTheme }> = [
   { prefix: '/2023', theme: festival2023Theme },
+  { prefix: '/2024', theme: festival2024Theme },
 ];
 
 /**
