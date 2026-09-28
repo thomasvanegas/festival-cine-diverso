@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * Variantes de fondo disponibles para la decoración de secciones.
  */
-type BgVariant = 'default' | 'pink' | 'blue' | 'green';
+type BgVariant = 'default' | 'pink' | 'blue' | 'green' | 'diverse2023';
 
 interface BackgroundDecorationProps {
   /** Variante de color para los círculos de desenfoque */
@@ -69,6 +69,17 @@ const BackgroundDecoration: React.FC<BackgroundDecorationProps> = ({
       bounce3: 'bg-pink-400',
       blur1: 'bg-white',
       blur2: 'bg-green-200',
+    },
+    // Paleta oficial I Edición (2023): Rojo Chile, Naranja Pinta, Verde Manzana, Verdigris, Ciruela
+    diverse2023: {
+      from: 'from-[#F6A61C]/20',
+      via: 'via-[#1AB6BA]/10',
+      to: 'to-[#954695]/10',
+      bounce1: 'bg-[#E5331A]',
+      bounce2: 'bg-[#8BBE26]',
+      bounce3: 'bg-[#1AB6BA]',
+      blur1: 'bg-white',
+      blur2: 'bg-[#F6A61C]',
     },
   };
 
