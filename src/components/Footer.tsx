@@ -47,9 +47,10 @@ const Footer = () => {
             <h4 className={`text-sm font-bold ${theme.footerHeading} mb-6 font-futura tracking-widest uppercase`}>Enlaces Rápidos</h4>
             <ul className="space-y-3 font-sans">
               <li><NavLink to="/about" className={theme.footerLinkClasses}>Una Carta para Quienes Llegan Aquí</NavLink></li>
-              <li><NavLink to="/" className={theme.footerLinkClasses}>Edición 2026</NavLink></li>
+              <li><NavLink to="/2026" className={theme.footerLinkClasses}>Edición 2026</NavLink></li>
               <li><NavLink to="/2025" className={theme.footerLinkClasses}>Edición 2025</NavLink></li>
               <li><NavLink to="/2024" className={theme.footerLinkClasses}>Edición 2024</NavLink></li>
+              <li><NavLink to="/2023" className={theme.footerLinkClasses}>Edición 2023</NavLink></li>
               <li><NavLink to="/filmmakers" className={theme.footerLinkClasses}>Hacedores de Cine</NavLink></li>
               <li><NavLink to="/patrocinadores" className={theme.footerLinkClasses}>Patrocinadores</NavLink></li>
             </ul>
@@ -64,10 +65,6 @@ const Footer = () => {
                   Inscríbete en Festhome
                 </a>
               </li>
-              <li><NavLink to="/#bases" className={theme.footerLinkClasses}>Bases de participación</NavLink></li>
-              <li><NavLink to="/" className={theme.footerLinkClasses}>Fechas importantes</NavLink></li>
-              <li><NavLink to="/" className={theme.footerLinkClasses}>Categorías</NavLink></li>
-              <li><NavLink to="/" className={theme.footerLinkClasses}>Premios</NavLink></li>
             </ul>
           </div>
 

@@ -101,8 +101,7 @@ const Header = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <NavLink
-                    to="/"
-                    end
+                    to="/2026"
                     className={({ isActive }) =>
                       `block px-4 py-2.5 text-sm transition-colors ${isActive ? theme.dropdownItemActive : `${theme.dropdownItemText} ${theme.dropdownItemHover}`
                       }`
@@ -217,8 +216,7 @@ const Header = () => {
                 {mobileDropdownOpen && (
                   <div className={`flex flex-col gap-3 pl-4 border-l ${theme.mobileAccordionBorder} mt-1 mb-2`}>
                     <NavLink
-                      to="/"
-                      end
+                      to="/2026"
                       className={({ isActive }) =>
                         `text-sm py-1 transition-colors ${isActive ? theme.mobileActiveText + ' font-bold' : `${theme.mobileTextSecondary} ${theme.mobileHoverText}`
                         }`

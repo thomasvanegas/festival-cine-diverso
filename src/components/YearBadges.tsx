@@ -18,23 +18,35 @@ const YearBadges = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {/* 2025 — Dossier */}
-          <a
-            href="https://drive.google.com/file/d/1BsMiXy4irsas0OQOtPvgnJ0nvl4wwz-H/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative group cursor-pointer"
-          >
-            <div className="bg-zinc-950/80 border border-zinc-800 rounded-2xl p-8 text-center transform group-hover:scale-[1.03] group-hover:border-festivalRed/60 transition-all duration-300 shadow-xl hover:shadow-festivalRed/10 hover:shadow-2xl">
-              <h3 className="text-5xl md:text-6xl font-black text-white font-futura mb-3">2025</h3>
-              <p className="text-zinc-400 text-sm font-light font-sans">Conoce nuestro Dossier de prensa</p>
-              <div className="mt-4 text-xs text-festivalRed font-bold uppercase tracking-wider font-ample group-hover:underline">
-                Ver dossier →
+          {/* 2026 — Edición actual (rojo de la identidad 2026) */}
+          <NavLink to="/2026" className="relative group cursor-pointer" aria-label="IV Edición 2026, edición actual: ver selección oficial">
+            <div className="relative overflow-hidden bg-festivalRed border border-red-400/60 rounded-2xl p-8 text-center transform group-hover:scale-[1.03] group-hover:border-white/70 transition-all duration-300 shadow-xl shadow-festivalRed/30 hover:shadow-2xl hover:shadow-festivalRed/40">
+              <div className="absolute inset-0 bg-texture-188 opacity-[0.18] mix-blend-multiply pointer-events-none" />
+              <div className="relative">
+                <span className="inline-block bg-black/80 text-white text-[10px] font-bold uppercase tracking-widest font-ample px-3 py-1 rounded-full mb-3">
+                  Edición actual
+                </span>
+                <h3 className="text-5xl md:text-6xl font-black text-white font-futura mb-3">2026</h3>
+                <p className="text-white text-sm font-medium font-sans italic">"La Memoria Revelada"</p>
+                <div className="mt-4 text-xs text-white font-bold uppercase tracking-wider font-ample group-hover:underline">
+                  Ver selección oficial →
+                </div>
               </div>
             </div>
-          </a>
+          </NavLink>
+
+          {/* 2025 */}
+          <NavLink to="/2025" className="relative group cursor-pointer">
+            <div className="bg-zinc-950/80 border border-zinc-800 rounded-2xl p-8 text-center transform group-hover:scale-[1.03] group-hover:border-festivalRed/60 transition-all duration-300 shadow-xl hover:shadow-festivalRed/10 hover:shadow-2xl">
+              <h3 className="text-5xl md:text-6xl font-black text-white font-futura mb-3">2025</h3>
+              <p className="text-zinc-400 text-sm font-light font-sans italic">"Historias que nos habitan"</p>
+              <div className="mt-4 text-xs text-festivalRed font-bold uppercase tracking-wider font-ample group-hover:underline">
+                Ver edición →
+              </div>
+            </div>
+          </NavLink>
 
           {/* 2024 */}
           <NavLink to="/2024" className="relative group cursor-pointer">
