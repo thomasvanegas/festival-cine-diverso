@@ -2,8 +2,10 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Festival2026 from './components/Festival2026';
 import Festival2025 from './components/Festival2025';
 import Festival2024 from './components/Festival2024';
 import Festival2023 from './components/Festival2023';
@@ -33,11 +35,13 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen">
         <Header />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/2026" element={<Festival2026 />} />
             <Route path="/2025" element={<Festival2025 />} />
             <Route path="/2023" element={<Festival2023 />} />
             <Route path="/2024" element={<Festival2024 />} />
