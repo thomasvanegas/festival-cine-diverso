@@ -61,14 +61,14 @@ const Home: React.FC = () => {
             </div>
 
             {/* Date and Location Badge */}
-            <div className="flex flex-wrap gap-4 md:gap-8 justify-center items-center mt-6 text-white text-sm font-medium bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-zinc-800">
-              <span className="flex items-center gap-1.5 font-ample tracking-wider uppercase text-festivalRed">
-                <Calendar className="w-4.5 h-4.5" />
+            <div className="flex flex-wrap gap-4 md:gap-8 justify-center items-center mt-6 text-white text-base md:text-xl font-futura font-extrabold bg-black/50 backdrop-blur-md px-6 py-3.5 rounded-full border border-festivalRed/40">
+              <span className="flex items-center gap-1.5 font-futura font-extrabold tracking-wide uppercase text-festivalRed">
+                <Calendar className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2.5} />
                 4 — 7 de noviembre de 2026
               </span>
-              <span className="hidden md:inline text-zinc-800">|</span>
-              <span className="flex items-center gap-1.5 font-ample tracking-wider uppercase text-white">
-                <MapPin className="w-4.5 h-4.5 mr-0.5" />
+              <span className="hidden md:inline text-zinc-600">|</span>
+              <span className="flex items-center gap-1.5 font-futura font-extrabold tracking-wide uppercase text-white">
+                <MapPin className="w-5 h-5 md:w-6 md:h-6 mr-0.5" strokeWidth={2.5} />
                 Barranquilla, Colombia
               </span>
             </div>
