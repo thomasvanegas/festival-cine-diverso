@@ -13,7 +13,7 @@
  */
 
 /** Códigos de país presentes en la selección (ISO 3166-1 alfa-2, en minúscula). */
-export type CodigoPais = 'es' | 'ar' | 'br' | 'gb' | 'co' | 'cl' | 'mx' | 'it' | 'us';
+export type CodigoPais = 'es' | 'ar' | 'br' | 'gb' | 'co' | 'cl' | 'mx' | 'it' | 'us' | 'pe' | 'pr' | 've' | 'uy' | 'ch';
 
 export type CategoriaId =
   | 'ficcion-internacional'
@@ -54,6 +54,11 @@ export const nombresPais: Record<CodigoPais, string> = {
   mx: 'México',
   it: 'Italia',
   us: 'Estados Unidos',
+  pe: 'Perú',
+  pr: 'Puerto Rico',
+  ve: 'Venezuela',
+  uy: 'Uruguay',
+  ch: 'Suiza',
 };
 
 /** Categorías en el orden en que se presentan en /2026. */
