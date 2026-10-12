@@ -129,7 +129,7 @@ const FilmSynopsisModal: React.FC<FilmSynopsisModalProps> = ({ film, categoriaLa
           </dl>
 
           <div className="mt-5">
-            <h4 className="mb-2 font-ample text-xs font-bold uppercase tracking-widest text-festivalRed">Sinopsis</h4>
+            <h4 className="mb-2 font-futura text-sm font-black uppercase tracking-widest text-festivalRed md:text-base">Sinopsis</h4>
             <p className="font-sans text-sm font-light leading-relaxed text-zinc-300 md:text-base">{film.sinopsis}</p>
           </div>
         </div>

@@ -270,8 +270,8 @@ export const cortos2026: Corto2026[] = [
     paises: ["es"],
     anio: 2025,
     sinopsis: "Rodado con un teléfono móvil en solo tres meses, Aquí donde soy apuesta por un estilo visual basado en el found footage y el videoarte y aúna imágenes de archivo familiar con entrevistas a personas queer de Asturias. Estas entrevistas conforman un íntimo retrato de las experiencias y las identidades LGTBIQ+ en nuestra región, siempre atravesadas por los espacios que habitamos y el deseo de marchar allá donde parece que todo ocurre, todo el mundo está y todo es posible: las grandes ciudades.",
-    categoria: "ficcion-internacional",
-    poster: "/imgs/edicion_2026/ficcion_internacional/aqui-donde-soy.webp",
+    categoria: "no-ficcion-internacional",
+    poster: "/imgs/edicion_2026/no_ficcion_internacional/aqui-donde-soy.webp",
     posterRatio: 0.675,
   },
   {

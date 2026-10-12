@@ -113,13 +113,13 @@ const Festival2026: React.FC = () => {
           La Memoria Revelada
         </p>
 
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-4 rounded-full border border-zinc-800 bg-black/40 px-6 py-3 text-sm font-medium backdrop-blur-md md:gap-8">
-          <span className="flex items-center gap-1.5 font-ample uppercase tracking-wider text-festivalRed">
-            <Calendar className="h-4 w-4" />4 — 7 de noviembre de 2026
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-4 rounded-full border border-festivalRed/40 bg-black/50 px-6 py-3.5 text-base font-futura font-extrabold backdrop-blur-md md:gap-8 md:text-xl">
+          <span className="flex items-center gap-1.5 font-futura font-extrabold uppercase tracking-wide text-festivalRed">
+            <Calendar className="h-5 w-5 md:h-6 md:w-6" strokeWidth={2.5} />4 — 7 de noviembre de 2026
           </span>
-          <span className="hidden text-zinc-800 md:inline">|</span>
-          <span className="flex items-center gap-1.5 font-ample uppercase tracking-wider text-white">
-            <MapPin className="h-4 w-4" />
+          <span className="hidden text-zinc-600 md:inline">|</span>
+          <span className="flex items-center gap-1.5 font-futura font-extrabold uppercase tracking-wide text-white">
+            <MapPin className="h-5 w-5 md:h-6 md:w-6" strokeWidth={2.5} />
             Barranquilla, Colombia
           </span>
         </div>
