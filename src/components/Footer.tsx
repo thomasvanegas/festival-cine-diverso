@@ -8,8 +8,8 @@ const Footer = () => {
 
   return (
     <footer className={`${theme.footerBg} relative overflow-hidden`}>
-      {/* Grunge Texture Overlay */}
-      <div className="absolute inset-0 bg-texture-238 opacity-[0.10] pointer-events-none mix-blend-overlay" />
+      {/* Textura grunge (según la identidad de la edición; vacía = sin textura) */}
+      {theme.footerTexture && <div className={theme.footerTexture} />}
       {/* Barra decorativa superior */}
       <div className={theme.footerTopBar} />
 
@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Festival Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src="/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png" alt="FICIDI Logo" className="h-12 w-auto" />
+              <img src={theme.footerLogoSrc} alt="FICIDI Logo" className="h-12 w-auto" />
             </div>
             <h3 className={`text-lg font-black ${theme.footerHeadlineText} mb-4 font-futura tracking-wide uppercase`}>
               Festival de Cine Diverso
