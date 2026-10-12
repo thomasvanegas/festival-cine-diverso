@@ -14,6 +14,8 @@ import { useLocation } from 'react-router-dom';
  */
 export interface EditionTheme {
   // Header
+  /** Ruta pública del logo (colibrí) que se muestra en el header. */
+  logoSrc: string;
   headerIdleBg: string;
   headerScrolledBg: string;
   /** Franja decorativa inferior del header (cadena vacía = no se renderiza). */
@@ -40,7 +42,11 @@ export interface EditionTheme {
   mobileActiveText: string;
 
   // Footer
+  /** Ruta pública del logo (colibrí) del footer; debe contrastar con `footerBg`. */
+  footerLogoSrc: string;
   footerBg: string;
+  /** Capa de textura sobre el footer (clases completas; cadena vacía = sin textura). */
+  footerTexture: string;
   /** Clase completa (posición + gradiente) de la barra superior del footer. */
   footerTopBar: string;
   footerHeadlineText: string;
@@ -59,6 +65,7 @@ export interface EditionTheme {
 
 /** Tema por defecto: identidad gráfica vigente (IV Edición, 2026). */
 const defaultTheme: EditionTheme = {
+  logoSrc: '/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png',
   headerIdleBg: 'bg-transparent',
   headerScrolledBg: 'bg-black/95 border-b border-festivalRed/30 backdrop-blur-md shadow-lg',
   headerStripe: '',
@@ -83,7 +90,9 @@ const defaultTheme: EditionTheme = {
   mobileHoverText: 'hover:text-festivalRed',
   mobileActiveText: 'text-festivalRed',
 
+  footerLogoSrc: '/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png',
   footerBg: 'bg-black text-white',
+  footerTexture: 'absolute inset-0 bg-texture-238 opacity-[0.10] pointer-events-none mix-blend-overlay',
   footerTopBar: 'absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-festivalRed/60 to-transparent',
   footerHeadlineText: 'text-white',
   footerBodyText: 'text-zinc-400',
@@ -110,6 +119,7 @@ const defaultTheme: EditionTheme = {
  * contraste de texto no aplica).
  */
 const festival2023Theme: EditionTheme = {
+  logoSrc: '/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png',
   headerIdleBg: 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-[#E5331A]/15',
   headerScrolledBg: 'bg-white backdrop-blur-md shadow-md border-b border-[#E5331A]/20',
   headerStripe: 'absolute bottom-0 left-0 right-0 h-1 bg-[linear-gradient(to_right,#E5331A,#F6A61C,#8BBE26,#1AB6BA,#954695)]',
@@ -134,7 +144,9 @@ const festival2023Theme: EditionTheme = {
   mobileHoverText: 'hover:text-[#954695]',
   mobileActiveText: 'text-[#E5331A]',
 
+  footerLogoSrc: '/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png',
   footerBg: 'bg-white text-gray-900',
+  footerTexture: 'absolute inset-0 bg-texture-238 opacity-[0.10] pointer-events-none mix-blend-overlay',
   footerTopBar: 'absolute top-0 left-0 right-0 h-1 bg-[linear-gradient(to_right,transparent,#E5331A,#F6A61C,#8BBE26,#1AB6BA,#954695,transparent)]',
   footerHeadlineText: 'text-gray-900',
   footerBodyText: 'text-gray-600',
@@ -159,6 +171,7 @@ const festival2023Theme: EditionTheme = {
  * cian, naranja, rosa) se reserva para la franja decorativa multicolor.
  */
 const festival2024Theme: EditionTheme = {
+  logoSrc: '/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png',
   headerIdleBg: 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-[#0033FF]/15',
   headerScrolledBg: 'bg-white backdrop-blur-md shadow-md border-b border-[#0033FF]/20',
   headerStripe: 'absolute bottom-0 left-0 right-0 h-1 bg-[linear-gradient(to_right,#0033FF,#00CCFF,#00CC33,#FFCC00,#FF6600,#FF3300,#FF99CC)]',
@@ -183,7 +196,9 @@ const festival2024Theme: EditionTheme = {
   mobileHoverText: 'hover:text-[#FF3300]',
   mobileActiveText: 'text-[#0033FF]',
 
+  footerLogoSrc: '/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png',
   footerBg: 'bg-white text-gray-900',
+  footerTexture: 'absolute inset-0 bg-texture-238 opacity-[0.10] pointer-events-none mix-blend-overlay',
   footerTopBar: 'absolute top-0 left-0 right-0 h-1 bg-[linear-gradient(to_right,transparent,#0033FF,#00CCFF,#00CC33,#FFCC00,#FF6600,#FF3300,#FF99CC,transparent)]',
   footerHeadlineText: 'text-gray-900',
   footerBodyText: 'text-gray-600',
@@ -196,10 +211,67 @@ const festival2024Theme: EditionTheme = {
   footerLinkHover: 'hover:text-[#FF3300]',
 };
 
+/**
+ * Tema de la III Edición (2025) — "Historias que nos habitan".
+ *
+ * Paleta oficial (public/imgs/edicion_2025/Códigos de color.jpg): rosas y
+ * morados del roble morado, amarillos y naranjas del roble amarillo, marrones
+ * del tronco y la tierra. Usa los tokens de Tailwind `edicion25.*`.
+ *
+ * - Header claro (crema del cielo del poster) con texto ciruela; el logo es el
+ *   colibrí morado oficial. Franja inferior con el degradé rosa → morado → naranja.
+ * - Footer oscuro `subsuelo` (el mismo tono de la tierra del poster, para que la
+ *   escena de cierre de /2025 se funda con él) con texto crema/amarillo. Como el
+ *   colibrí morado no se vería sobre fondo oscuro, usa la variante crema.
+ * - Contraste (WCAG): ciruela/violeta sobre crema ≥ 8:1; crema/mantequilla sobre
+ *   subsuelo ≥ 12:1; magenta sobre crema ≈ 5:1 (solo hover/activo).
+ */
+const festival2025Theme: EditionTheme = {
+  logoSrc: '/imgs/edicion_2025/decor/colibri.png',
+  headerIdleBg: 'bg-edicion25-crema/90 backdrop-blur-sm shadow-sm border-b border-edicion25-tierra/15',
+  headerScrolledBg: 'bg-edicion25-crema backdrop-blur-md shadow-md border-b border-edicion25-tierra/20',
+  headerStripe: 'absolute bottom-0 left-0 right-0 h-1 bg-[linear-gradient(to_right,#c55eb6,#9740ab,#69268e,#3c0e4e,#e7be3c,#d5942d,#a76019)]',
+  logoIdleText: 'text-edicion25-violeta',
+  logoScrolledText: 'text-edicion25-violeta',
+  logoHoverText: 'group-hover:text-edicion25-magenta',
+  navText: 'text-edicion25-ciruela',
+  navHoverText: 'hover:text-edicion25-magenta',
+  navActiveText: 'text-edicion25-violeta',
+  dropdownPanelBg: 'bg-edicion25-papel backdrop-blur-md rounded-xl shadow-xl border border-edicion25-violeta/20',
+  dropdownItemText: 'text-edicion25-ciruela',
+  dropdownItemHover: 'hover:text-edicion25-magenta',
+  dropdownItemActive: 'font-bold text-edicion25-violeta bg-edicion25-rosa/15',
+  sidebarBg: 'bg-edicion25-papel',
+  sidebarBorder: 'border-edicion25-violeta/20',
+  sidebarTitleText: 'text-edicion25-violeta',
+  sidebarCloseText: 'text-edicion25-ciruela',
+  sidebarCloseHoverText: 'hover:text-edicion25-magenta',
+  mobileAccordionBorder: 'border-edicion25-violeta/25',
+  mobileTextPrimary: 'text-edicion25-ciruela',
+  mobileTextSecondary: 'text-edicion25-tierra',
+  mobileHoverText: 'hover:text-edicion25-magenta',
+  mobileActiveText: 'text-edicion25-violeta',
+
+  footerLogoSrc: '/imgs/edicion_2025/decor/colibri-crema.png',
+  footerBg: 'bg-edicion25-subsuelo text-edicion25-crema',
+  footerTexture: '',
+  footerTopBar: 'absolute top-0 left-0 right-0 h-1 bg-[linear-gradient(to_right,transparent,#c55eb6,#9740ab,#e7be3c,#d5942d,transparent)]',
+  footerHeadlineText: 'text-edicion25-crema',
+  footerBodyText: 'text-edicion25-mantequilla/80',
+  footerHeading: 'text-edicion25-sol',
+  footerIcon: 'text-edicion25-sol',
+  footerSocialColors: 'border-edicion25-magenta text-edicion25-mantequilla hover:border-edicion25-sol hover:text-edicion25-sol',
+  footerLinkClasses: 'text-edicion25-mantequilla/80 hover:text-edicion25-sol transition-colors text-sm',
+  footerDivider: 'border-edicion25-violeta/40',
+  footerMutedText: 'text-edicion25-arena/70',
+  footerLinkHover: 'hover:text-edicion25-sol',
+};
+
 /** Mapa de prefijos de ruta a tema. El primero que haga match (startsWith) gana. */
 const editionThemes: Array<{ prefix: string; theme: EditionTheme }> = [
   { prefix: '/2023', theme: festival2023Theme },
   { prefix: '/2024', theme: festival2024Theme },
+  { prefix: '/2025', theme: festival2025Theme },
 ];
 
 /**

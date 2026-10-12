@@ -7,6 +7,8 @@ interface FlagProps {
   code: CodigoPais;
   /** Clases Tailwind para el tamaño (por defecto 24×18 px, proporción 4:3). */
   className?: string;
+  /** Clases del contorno; por defecto un aro blanco sutil (fondos oscuros). En fondos claros usar `ring-black/20`. */
+  ringClassName?: string;
 }
 
 /**
@@ -16,7 +18,7 @@ interface FlagProps {
  * bandera. El nombre del país queda disponible como `alt` y `title`
  * (lectores de pantalla y tooltip) aunque visualmente solo se vea la bandera.
  */
-const Flag: React.FC<FlagProps> = ({ code, className = 'h-[18px] w-6' }) => {
+const Flag: React.FC<FlagProps> = ({ code, className = 'h-[18px] w-6', ringClassName = 'ring-white/20' }) => {
   const nombre = nombresPais[code];
   return (
     <img
@@ -25,7 +27,7 @@ const Flag: React.FC<FlagProps> = ({ code, className = 'h-[18px] w-6' }) => {
       title={nombre}
       loading="lazy"
       draggable={false}
-      className={`${className} inline-block rounded-[3px] object-cover ring-1 ring-white/20 shadow-sm`}
+      className={`${className} inline-block rounded-[3px] object-cover ring-1 ${ringClassName} shadow-sm`}
     />
   );
 };

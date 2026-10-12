@@ -71,7 +71,7 @@ const Header = () => {
         {theme.headerStripe && <div className={theme.headerStripe} />}
         <nav className="flex justify-between items-center p-6 md:p-8 max-w-7xl mx-auto">
           <NavLink to="/" className="flex items-center space-x-2 group">
-            <img src="/2026/FICIDI_IV_PIEZAS_GRAFICAS/Logotipos/ICONO ROJO.png" alt="Colibrí Logo" className="h-16 w-auto" />
+            <img src={theme.logoSrc} alt="Colibrí Logo" className="h-16 w-auto" />
             <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? theme.logoScrolledText : theme.logoIdleText
               } ${theme.logoHoverText}`}>
               FICIDI
@@ -277,7 +277,7 @@ const Header = () => {
                 }
                 onClick={() => setSidebarOpen(false)}
               >
-                Quiénes Somos
+                Una Carta para Quienes Llegan Aquí
               </NavLink>
               <NavLink
                 to="/patrocinadores"
